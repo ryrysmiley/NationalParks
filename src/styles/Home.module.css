@@ -44,6 +44,13 @@
 
 .exploreparks a {
 	text-decoration: none;
-	color: black;
-	background-color: rgb(0, 172, 0);
+	color: rgb(26, 26, 26);
+	background-color: rgb(0, 171, 0);
+	padding: 5px 10px;
+	border-radius: 7px;
+}
+
+.exploreparks a:hover {
+	background-color: rgb(56, 218, 56);
+	color: rgb(221, 221, 221);
 }
