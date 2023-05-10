@@ -24,3 +24,26 @@
 .navbar a:hover {
 	background-color: #2d2d2d;
 }
+
+/* ExploreParks */
+.exploreparks {
+	margin: 20px;
+}
+
+.exploreparks ul {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.exploreparks li {
+	list-style: none;
+	margin: 10px;
+}
+
+.exploreparks a {
+	text-decoration: none;
+	color: black;
+	background-color: rgb(0, 172, 0);
+}
