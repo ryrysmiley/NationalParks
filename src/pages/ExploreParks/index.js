@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { stateCodes, supabase } from "../../../util/util";
-export default function Home() {
+export default function ExplporeParks() {
 	const [selectedState, setSelectedState] = useState(undefined);
 	const [parks, setParks] = useState([]);
 
