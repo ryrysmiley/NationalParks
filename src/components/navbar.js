@@ -6,16 +6,19 @@ export function Navbar() {
 		<div className={styles.navbar}>
 			<ul>
 				<li>
-					<Link href="/">Home</Link>
+					<Link href="/">HOME</Link>
 				</li>
 				<li>
-					<Link href="/ExploreParks">Explore Parks</Link>
+					<Link href="/ExploreParks">EXPLORE PARKS</Link>
 				</li>
 				<li>
-					<Link href="/MyParks">My Parks</Link>
+					<img className={styles.locationicon} src="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png"></img>
 				</li>
 				<li>
-					<Link href="/Account">Account</Link>
+					<Link href="/MyParks">MY PARKS</Link>
+				</li>
+				<li>
+					<Link href="/Account">ACCOUNT</Link>
 				</li>
 			</ul>
 		</div>
