@@ -26,7 +26,6 @@ export default function Home() {
 					throw error;
 				}
 				setParkData(data);
-				console.log(parkData);
 			} catch (error) {
 				console.log(error);
 			}
