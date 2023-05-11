@@ -47,11 +47,7 @@ export default function Account({ user, setUser }) {
 		try {
 			const { error } = await supabase.auth.signOut();
 			if (error) throw error;
-			const {
-				data: { session },
-			} = await supabase.auth.getSession();
-			const { user } = session;
-			setUser(user);
+			setUser(null);
 		} catch (error) {
 			console.log(error);
 		}
