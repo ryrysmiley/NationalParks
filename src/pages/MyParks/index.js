@@ -25,8 +25,10 @@ export default function MyParks({ user }) {
 		}
 	}, []);
 
+	if (!user) return <h1>Log in to see your saved parks!</h1>;
 	return (
 		<div>
+			<h1>My Parks</h1>
 			{userParks && (
 				<ul>
 					{Object.entries(userParks.user_parks).map(([key, value]) => (
