@@ -13,7 +13,7 @@ export default function MyParks({ user }) {
 				.select("user_parks")
 				.eq("user_id", user.id);
 			if (error) throw error;
-			setUserParks(data);
+			setUserParks(data[0]);
 		} catch (error) {
 			console.log(error);
 		}
@@ -29,8 +29,8 @@ export default function MyParks({ user }) {
 		<div>
 			{userParks && (
 				<ul>
-					{Object.entries(userParks).map(([key, value]) => (
-						<li>
+					{Object.entries(userParks.user_parks).map(([key, value]) => (
+						<li key={key}>
 							<Link href={"/ExploreParks/" + key}>{value}</Link>
 						</li>
 					))}

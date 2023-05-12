@@ -32,12 +32,26 @@ export default function Account({ user, setUser }) {
 
 	async function handleSignUp(e) {
 		try {
-			const {
-				data: { user },
-				error,
-			} = await supabase.auth.signInWithPassword({ email, password });
+			e.preventDefault();
+			setEmail("");
+			setPassword("");
+			setConfirmPassword("");
+			const { data, error } = await supabase.auth.signUp({
+				email: email,
+				password: password,
+			});
 
 			if (error) throw error;
+
+			//add to database
+			{
+				const { error } = await supabase
+					.from("User Parks")
+					.insert([{ user_id: data.user.id, user_parks: {} }]);
+				if (error) throw error;
+			}
+
+			setSignInMode(true);
 		} catch (error) {
 			console.log(error);
 		}
@@ -61,7 +75,6 @@ export default function Account({ user, setUser }) {
 			const { user } = session;
 			setUser(user);
 		};
-		console.log(user);
 	});
 
 	if (!user) {
