@@ -3,7 +3,7 @@ import { supabase } from "../../../util/util";
 import { useState, useEffect } from "react";
 import { compress } from "../../../next.config";
 
-export default function parkcode({ user }) {
+export default function parkcode({ user, setUser }) {
 	const [parkData, setParkData] = useState(undefined);
 	const [saved, setSaved] = useState(false);
 
@@ -92,6 +92,14 @@ export default function parkcode({ user }) {
 				console.log(error);
 			}
 		})();
+		async function checkSession() {
+			const {
+				data: { session },
+			} = await supabase.auth.getSession();
+			const { user } = session;
+			setUser(user);
+		}
+		checkSession();
 	}, []);
 	if (!parkData) {
 		return <div>loading...</div>;

@@ -3,11 +3,15 @@ import { supabase } from "../../../util/util";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function MyParks({ user }) {
+export default function MyParks({ user, setUser }) {
 	const [userParks, setUserParks] = useState(undefined);
 
 	async function getUserParks() {
 		try {
+			const {
+				data: { session },
+			} = await supabase.auth.getSession();
+			const { user } = session;
 			const { data, error } = await supabase
 				.from("User Parks")
 				.select("user_parks")
@@ -20,7 +24,16 @@ export default function MyParks({ user }) {
 	}
 
 	useEffect(() => {
-		if (user) {
+		async function checkSession() {
+			const {
+				data: { session },
+			} = await supabase.auth.getSession();
+			if (!session) return;
+			const { user } = session;
+			setUser(user);
+		}
+		checkSession();
+		if (!user) {
 			getUserParks();
 		}
 	}, []);
