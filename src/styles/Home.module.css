@@ -7,7 +7,6 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-
 }
 .navbar li {
 	float: left;
@@ -23,29 +22,42 @@
 	text-decoration: none;
 }
 
-.navbar a:hover{
+.navbar a:hover {
 	color: orange;
 }
 
-.locationicon{
+.locationicon {
 	padding: 5px;
 	height: 45px;
 }
 
-
-
 /* Home Page */
 
-.homepic{
+.homepic {
 	position: fixed;
 	z-index: -1;
 	object-fit: cover;
-	top:0;
+	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	opacity: 1;
+	transition: 0.25s;
 }
-.homecontainer{
+
+.homepictrans {
+	position: fixed;
+	z-index: -1;
+	object-fit: cover;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 0.25s;
+}
+
+.homecontainer {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -54,16 +66,16 @@
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 	padding: 20px;
-	color:white;
+	color: white;
 	width: 400px;
 }
 
-.homecontainer a{
+.homecontainer a {
 	color: white;
 	text-decoration: underline;
 }
 
-.homecontainer a:hover{
+.homecontainer a:hover {
 	color: orange;
 	text-decoration: underline;
 }
@@ -73,18 +85,18 @@
 	margin: 0;
 }
 
-.exploreparksintro{
+.exploreparksintro {
 	position: relative;
 	padding: 20px;
 	color: white;
 	text-align: center;
 }
 
-.selectparks{
+.selectparks {
 	position: relative;
 	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 200px;
 	height: 30px;
 	padding: 5px;
@@ -92,7 +104,6 @@
 	border-radius: 4px;
 	background-color: #fff;
 }
-
 
 .exploreparks ul {
 	padding: 0;
@@ -114,33 +125,32 @@
 	padding: 10px 50px;
 }
 
-.exploreparkscontainer{
-	position:relative;
+.exploreparkscontainer {
+	position: relative;
 	padding: 0px;
-	width: 300px; 
+	width: 300px;
 	height: 350px;
-	overflow:hidden;
-	
+	overflow: hidden;
 }
 
-.exploreparks img{
+.exploreparks img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	position:absolute;
+	position: absolute;
 	top: 0;
 	left: 0;
-} 
+}
 
-.exploreparkscontainer p{
+.exploreparkscontainer p {
 	position: absolute;
 	box-sizing: border-box;
 	text-align: center;
-	color:white;
+	color: white;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
 	padding: 20px;
-	margin:0;
+	margin: 0;
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
@@ -149,9 +159,43 @@
 	font-size: 20px;
 }
 
-  
-
 /* .exploreparks a:hover {
 	background-color: rgb(56, 218, 56);
 	color: rgb(221, 221, 221);
 } */
+
+/* my parks */
+
+.myparks {
+	margin: 0;
+}
+
+.myparks h1 {
+	text-align: center;
+}
+
+.myparks ul {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.myparks li {
+	list-style: none;
+	margin: 10px;
+}
+
+.myparks a {
+	text-decoration: none;
+	color: black;
+	background-color: #77dd77;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.myparks a:hover {
+	transition: 0.3s;
+	background-color: #34de34;
+	color: white;
+}

@@ -11,6 +11,7 @@ export default function MyParks({ user, setUser }) {
 			const {
 				data: { session },
 			} = await supabase.auth.getSession();
+			if (!session) return;
 			const { user } = session;
 			const { data, error } = await supabase
 				.from("User Parks")
@@ -33,15 +34,19 @@ export default function MyParks({ user, setUser }) {
 			setUser(user);
 		}
 		checkSession();
-		if (!user) {
-			getUserParks();
-		}
+		getUserParks();
 	}, []);
 
-	if (!user) return <h1>Log in to see your saved parks!</h1>;
+	if (!user)
+		return (
+			<div className={styles.myparks}>
+				<h1>Log in to see your saved parks!</h1>
+			</div>
+		);
 	return (
-		<div>
+		<div className={styles.myparks}>
 			<h1>My Parks</h1>
+			{userParks === undefined && <h2>You have no saved parks!</h2>}
 			{userParks && (
 				<ul>
 					{Object.entries(userParks.user_parks).map(([key, value]) => (
