@@ -26,7 +26,7 @@ export default function Home({ index, setIndex }) {
 				setIndex((prevIndex) =>
 					prevIndex === images.length - 1 ? 0 : prevIndex + 1
 				);
-			}, 500);
+			}, 250);
 		}, 15000);
 
 		return () => {

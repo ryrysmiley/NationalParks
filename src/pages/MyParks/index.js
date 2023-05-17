@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function MyParks({ user, setUser }) {
 	const [userParks, setUserParks] = useState(undefined);
+	const [loaded, setLoaded] = useState(false);
 
 	async function getUserParks() {
 		try {
@@ -34,7 +35,9 @@ export default function MyParks({ user, setUser }) {
 			setUser(user);
 		}
 		checkSession();
+		setLoaded(false);
 		getUserParks();
+		setLoaded(true);
 	}, []);
 
 	if (!user)
@@ -46,7 +49,9 @@ export default function MyParks({ user, setUser }) {
 	return (
 		<div className={styles.myparks}>
 			<h1>My Parks</h1>
-			{userParks === undefined && <h2>You have no saved parks!</h2>}
+			{(userParks.user_parks === undefined ||
+				Object.keys(userParks.user_parks).length === 0) &&
+				loaded && <h2>You have no saved parks!</h2>}
 			{userParks && (
 				<ul>
 					{Object.entries(userParks.user_parks).map(([key, value]) => (
