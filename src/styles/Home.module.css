@@ -23,7 +23,7 @@
 }
 
 .navbar a:hover {
-	color: orange;
+	color: peachpuff;
 }
 
 .locationicon {
@@ -188,14 +188,15 @@
 
 .myparks a {
 	text-decoration: none;
+	font-weight: bold;
 	color: black;
-	background-color: #77dd77;
-	padding: 5px 10px;
+	background-color: white;
+	padding: 10px 10px;
 	border-radius: 5px;
 }
 
 .myparks a:hover {
 	transition: 0.3s;
-	background-color: #34de34;
+	background-color: peachpuff;
 	color: white;
 }

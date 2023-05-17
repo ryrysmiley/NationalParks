@@ -15,13 +15,14 @@ export default function ExplporeParks() {
 			try {
 				let { data, error } = await supabase
 					.from("Parks")
-					.select("parkCode, fullName")
+					.select("parkCode, fullName, images")
 					.ilike("states", `%${selectedState}%`);
 
 				if (error) {
 					throw error;
 				}
 				setParks(data);
+				console.log(data);
 			} catch (error) {
 				console.log(error);
 			}
@@ -55,7 +56,7 @@ export default function ExplporeParks() {
 					<li key={park.parkCode}>
 					<Link href={"/ExploreParks/" + park.parkCode}>
 						<div className={styles.exploreparkscontainer}>
-						<img src="https://www.sftravel.com/sites/default/files/styles/hero/public/2022-11/yosemite-falls.jpg.webp?itok=eVL2qHTd" />
+						<img src={park.images[0].url} />
 						<p>{park.fullName}</p>
 						</div>
 					</Link>
