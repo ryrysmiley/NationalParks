@@ -27,7 +27,7 @@ export default function Home({ index, setIndex }) {
 					prevIndex === images.length - 1 ? 0 : prevIndex + 1
 				);
 			}, 250);
-		}, 15000);
+		}, 7000);
 
 		return () => {
 			clearInterval(interval);

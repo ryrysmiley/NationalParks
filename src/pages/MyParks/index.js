@@ -50,7 +50,7 @@ export default function MyParks({ user, setUser }) {
 	return (
 		<div className={styles.myparks}>
 			<h1>My Parks</h1>
-			{(userParks.user_parks === undefined ||
+			{(userParks === undefined ||
 				Object.keys(userParks.user_parks).length === 0) &&
 				loaded && <h2>You have no saved parks!</h2>}
 			{userParks && (

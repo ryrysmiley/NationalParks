@@ -198,5 +198,78 @@
 .myparks a:hover {
 	transition: 0.3s;
 	background-color: peachpuff;
-	color: white;
+	color: black;
 }
+
+.parkscontainer{
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	object-fit: cover;
+
+}
+
+.parksheader{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+.parksimg{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.parksarrow{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	background-color: white;
+	border: none;
+	color: black;
+	font-size: 15px;
+	border-radius: 10%;
+}
+
+.parkstitle{
+	position: relative;
+	text-align: center;
+}
+
+.parksdescription{
+	margin-top: 40px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	width: 600px;	
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.parksinfo{
+	margin-top: 40px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	width: 600px;	
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.parkshours{
+	list-style: none;
+	padding: 0;
+ 	 margin: 0;
+}
+
+.parkshours li {
+	text-align: center;
+  }
