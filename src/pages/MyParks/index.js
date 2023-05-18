@@ -46,13 +46,13 @@ export default function MyParks({ user, setUser }) {
 				<h1>Log in to see your saved parks!</h1>
 			</div>
 		);
-	console.log(userParks)
+	console.log(userParks);
 	return (
 		<div className={styles.myparks}>
 			<h1>My Parks</h1>
 			{(userParks === undefined ||
 				Object.keys(userParks.user_parks).length === 0) &&
-				loaded && <h2>You have no saved parks!</h2>}
+				loaded && <h1>You have no saved parks!</h1>}
 			{userParks && (
 				<ul>
 					{Object.entries(userParks.user_parks).map(([key, value]) => (

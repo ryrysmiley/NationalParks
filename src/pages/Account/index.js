@@ -164,7 +164,7 @@ export default function Account({ user, setUser }) {
 
 	return (
 		<div>
-			You are signed in
+			You are signed in with {user.email}
 			<button onClick={() => handleSignOut()}>Sign Out</button>
 		</div>
 	);

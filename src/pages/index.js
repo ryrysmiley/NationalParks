@@ -20,14 +20,14 @@ export default function Home({ index, setIndex }) {
 			setBgStyle(styles.homepictrans);
 			setTimeout(() => {
 				setBgStyle(styles.homepic);
-			}, 500);
+			}, 750);
 
 			setTimeout(() => {
 				setIndex((prevIndex) =>
 					prevIndex === images.length - 1 ? 0 : prevIndex + 1
 				);
-			}, 250);
-		}, 7000);
+			}, 300);
+		}, 8000);
 
 		return () => {
 			clearInterval(interval);
