@@ -129,7 +129,7 @@ export default function parkcode({ user, setUser }) {
 			<div className={styles.parkscontainer}>
 				<h1 className={styles.parkstitle}>{parkData[0].fullName}</h1>
 				{user && (
-					<button onClick={() => handleParkSave()}>
+					<button className={styles.parkssavepark} onClick={() => handleParkSave()}>
 						{saved ? "Unsave Park" : "Save Park"}
 					</button>
 				)}
@@ -154,7 +154,7 @@ export default function parkcode({ user, setUser }) {
 					<li> Saturday: {parkData[0].standardHours[0].standardHours.saturday}</li>
 				</ul>
 				<h2>Website</h2>
-				<a href={parkData[0].url}>Visit {parkData[0].fullName} Official Website</a>
+				<a className={styles.parkswebsite} href={parkData[0].url}>Visit {parkData[0].fullName} Official Website</a>
 			</div>
 		</div>
 
