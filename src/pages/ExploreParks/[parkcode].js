@@ -96,6 +96,7 @@ export default function parkcode({ user, setUser }) {
 			const {
 				data: { session },
 			} = await supabase.auth.getSession();
+			if (!session) return;
 			const { user } = session;
 			setUser(user);
 		}
