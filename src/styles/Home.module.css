@@ -1,4 +1,10 @@
 /* Navbar */
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.7);
+}
 .navbar ul {
 	list-style: none;
 	margin: 0;
@@ -31,6 +37,17 @@
 	height: 45px;
 }
 
+@media screen and (max-width: 600px) {
+	.navbar li:nth-child(3) {
+		display: none;
+	}
+	.navbar ul {
+		flex-direction: column;	
+	}
+	.navbar a {
+		padding: 5px 40px;
+	}
+}
 /* Home Page */
 
 .homepic {
@@ -84,6 +101,18 @@
 .exploreparks {
 	margin: 0;
 }
+.selectparkscontainer{
+	padding-top: 20px;
+	position: sticky;
+	top: 59px;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 600px) {
+	.selectparkscontainer{
+		top: 124px;
+	}
+}
 
 .exploreparksintro {
 	position: relative;
@@ -103,6 +132,7 @@
 	font-size: 16px;
 	border-radius: 4px;
 	background-color: #fff;
+	z-index: 5;
 }
 
 .exploreparks ul {

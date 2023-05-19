@@ -35,20 +35,22 @@ export default function ExplporeParks() {
 				<h1>EXPLORE PARKS</h1>
 				<p>Explore the breathtaking beauty of US national parks with our interactive 'Explore Parks' feature. Select a state of your choice and discover the stunning parks it has to offer. From towering mountains to serene lakes, embark on a virtual journey to explore the natural wonders of the United States.</p>
 			</div>
-			<select
-				defaultValue={"default"}
-				onChange={(e) => setSelectedState(e.target.value)}
-				className={styles.selectparks}
-			>
-				<option value="default" disabled>
-				-- select a state --
-				</option>
-				{stateCodes.map((state) => (
-				<option key={state.stateCode} value={state.stateCode}>
-					{state.name}
-				</option>
-				))}
-			</select>
+			<div className={styles.selectparkscontainer}>
+				<select
+					defaultValue={"default"}
+					onChange={(e) => setSelectedState(e.target.value)}
+					className={styles.selectparks}
+				>
+					<option value="default" disabled>
+					-- select a state --
+					</option>
+					{stateCodes.map((state) => (
+					<option key={state.stateCode} value={state.stateCode}>
+						{state.name}
+					</option>
+					))}
+				</select>
+			</div>
 
 			{selectedState && (
 				<ul>
