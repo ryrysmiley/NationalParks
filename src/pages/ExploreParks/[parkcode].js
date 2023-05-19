@@ -56,6 +56,11 @@ export default function parkcode({ user, setUser }) {
 
 	async function checkIfSaved(parkCode) {
 		try {
+			const {
+				data: { session },
+			} = await supabase.auth.getSession();
+			if (!session) return;
+			const { user } = session;
 			let { data, error } = await supabase
 				.from("User Parks")
 				.select("user_parks")
@@ -74,6 +79,14 @@ export default function parkcode({ user, setUser }) {
 		const url = getURL();
 		const parkCode = url.split("/").pop();
 		(async () => {
+			const {
+				data: { session },
+			} = await supabase.auth.getSession();
+			if (!session) return;
+			const { user } = session;
+			setUser(user);
+		})();
+		(async () => {
 			try {
 				let { data, error } = await supabase
 					.from("Parks")
@@ -84,52 +97,46 @@ export default function parkcode({ user, setUser }) {
 					throw error;
 				}
 				setParkData(data);
-
-				if (!user) {
-					return;
-				}
 				setSaved(await checkIfSaved(parkCode));
 			} catch (error) {
 				console.log(error);
 			}
 		})();
-		async function checkSession() {
-			const {
-				data: { session },
-			} = await supabase.auth.getSession();
-			if (!session) return;
-			const { user } = session;
-			setUser(user);
-		}
-		checkSession();
 	}, []);
 	if (!parkData) {
 		return <div>loading...</div>;
 	}
-	console.log(parkData)
 
 	const navImages = () => {
 		setCurrImageIndex((prevIndex) => {
 			const nextIndex = prevIndex + 1;
-			if(nextIndex >= parkData[0].images.length) {
+			if (nextIndex >= parkData[0].images.length) {
 				return 0;
 			}
 			return nextIndex;
 		});
-	}
+	};
 
-	
 	return (
 		<div>
-			<div className={styles.parksheader}> 
-				<img className={styles.parksimg} src={parkData[0].images[currImageIndex].url} />
-				<button className={styles.parksarrow} onClick={navImages}> &rarr; </button>
+			<div className={styles.parksheader}>
+				<img
+					className={styles.parksimg}
+					src={parkData[0].images[currImageIndex].url}
+				/>
+				<button className={styles.parksarrow} onClick={navImages}>
+					{" "}
+					&rarr;{" "}
+				</button>
 			</div>
-		
+
 			<div className={styles.parkscontainer}>
 				<h1 className={styles.parkstitle}>{parkData[0].fullName}</h1>
 				{user && (
-					<button className={styles.parkssavepark} onClick={() => handleParkSave()}>
+					<button
+						className={styles.parkssavepark}
+						onClick={() => handleParkSave()}
+					>
 						{saved ? "Unsave Park" : "Save Park"}
 					</button>
 				)}
@@ -147,17 +154,29 @@ export default function parkcode({ user, setUser }) {
 				<ul className={styles.parkshours}>
 					<li> Sunday: {parkData[0].standardHours[0].standardHours.sunday}</li>
 					<li> Monday: {parkData[0].standardHours[0].standardHours.monday}</li>
-					<li> Tuesday: {parkData[0].standardHours[0].standardHours.tuesday}</li>
-					<li> Wednesday: {parkData[0].standardHours[0].standardHours.wednesday}</li>
-					<li> Thursday: {parkData[0].standardHours[0].standardHours.thursday}</li>
+					<li>
+						{" "}
+						Tuesday: {parkData[0].standardHours[0].standardHours.tuesday}
+					</li>
+					<li>
+						{" "}
+						Wednesday: {parkData[0].standardHours[0].standardHours.wednesday}
+					</li>
+					<li>
+						{" "}
+						Thursday: {parkData[0].standardHours[0].standardHours.thursday}
+					</li>
 					<li> Friday: {parkData[0].standardHours[0].standardHours.friday}</li>
-					<li> Saturday: {parkData[0].standardHours[0].standardHours.saturday}</li>
+					<li>
+						{" "}
+						Saturday: {parkData[0].standardHours[0].standardHours.saturday}
+					</li>
 				</ul>
 				<h2>Website</h2>
-				<a className={styles.parkswebsite} href={parkData[0].url}>Visit {parkData[0].fullName} Official Website</a>
+				<a className={styles.parkswebsite} href={parkData[0].url}>
+					Visit {parkData[0].fullName} Official Website
+				</a>
 			</div>
 		</div>
-
-			
 	);
 }
