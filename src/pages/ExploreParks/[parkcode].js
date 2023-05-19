@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.css";
 import { supabase } from "../../../util/util";
 import { useState, useEffect } from "react";
 import { compress } from "../../../next.config";
+import Head from "next/head";
 
 export default function parkcode({ user, setUser }) {
 	const [parkData, setParkData] = useState(undefined);
@@ -119,6 +120,11 @@ export default function parkcode({ user, setUser }) {
 
 	return (
 		<div>
+			<Head>
+				<title>National Park</title>
+				<meta name="description" content="A specific page for a specific National Park" />
+				<link rel="icon" href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png" />
+			</Head>
 			<div className={styles.parksheader}>
 				<img
 					className={styles.parksimg}
