@@ -115,6 +115,17 @@ export default function Account({ user, setUser }) {
                 Sign In
               </button>
             </form>
+            <button
+              className={styles.signupbutton}
+              onClick={() => {
+                setSignInMode(!signInMode);
+                setEmail("");
+                setPassword("");
+                setConfirmPassword("");
+              }}
+            >
+              {signInMode ? "Sign Up" : "Back to Sign In"}
+            </button>
           </div>
         )}
         {!signInMode && (
@@ -160,19 +171,19 @@ export default function Account({ user, setUser }) {
                 Sign Up
               </button>
             </form>
+          <button
+            className={styles.signupbutton}
+            onClick={() => {
+              setSignInMode(!signInMode);
+              setEmail("");
+              setPassword("");
+              setConfirmPassword("");
+            }}
+          >
+            {signInMode ? "Sign Up" : "Back to Sign In"}
+          </button>
           </div>
         )}
-        <button
-          className={styles.signupbutton}
-          onClick={() => {
-            setSignInMode(!signInMode);
-            setEmail("");
-            setPassword("");
-            setConfirmPassword("");
-          }}
-        >
-          {signInMode ? "Sign Up" : "Back to Sign In"}
-        </button>
       </div>
     );
   }
