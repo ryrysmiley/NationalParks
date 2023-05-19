@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { compress } from "../../../next.config";
 import Head from "next/head";
 
-export default function parkcode({ user, setUser }) {
+export default function Parkcode({ user, setUser }) {
 	const [parkData, setParkData] = useState(undefined);
 	const [saved, setSaved] = useState(false);
 	const [currImageIndex, setCurrImageIndex] = useState(0);
@@ -122,8 +122,14 @@ export default function parkcode({ user, setUser }) {
 		<div>
 			<Head>
 				<title>National Park</title>
-				<meta name="description" content="A specific page for a specific National Park" />
-				<link rel="icon" href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png" />
+				<meta
+					name="description"
+					content="A specific page for a specific National Park"
+				/>
+				<link
+					rel="icon"
+					href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png"
+				/>
 			</Head>
 			<div className={styles.parksheader}>
 				<img

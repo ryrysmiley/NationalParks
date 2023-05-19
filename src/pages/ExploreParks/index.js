@@ -33,17 +33,20 @@ export default function ExplporeParks() {
 			<Head>
 				<title>Explore</title>
 				<meta name="description" content="Explore page for National Parks" />
-				<link rel="icon" href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png" />
+				<link
+					rel="icon"
+					href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png"
+				/>
 			</Head>
 			<div className={styles.exploreparks}>
 				<div className={styles.exploreparksintro}>
 					<h1>EXPLORE PARKS</h1>
 					<p>
 						Explore the breathtaking beauty of US national parks with our
-						interactive 'Explore Parks' feature. Select a state of your choice and
-						discover the stunning parks it has to offer. From towering mountains
-						to serene lakes, embark on a virtual journey to explore the natural
-						wonders of the United States.
+						interactive "Explore Parks" feature. Select a state of your choice
+						and discover the stunning parks it has to offer. From towering
+						mountains to serene lakes, embark on a virtual journey to explore
+						the natural wonders of the United States.
 					</p>
 				</div>
 				<div className={styles.selectparkscontainer}>
