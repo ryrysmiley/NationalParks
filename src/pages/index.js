@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.css";
 import { getParks } from "../../util/util";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function Home({ index, setIndex }) {
 	const [bgStyle, setBgStyle] = useState(styles.homepic);
@@ -35,6 +36,11 @@ export default function Home({ index, setIndex }) {
 	}, []);
 	return (
 		<div>
+			<Head>
+				<title>Home</title>
+				<meta name="description" content="Home page for National Parks" />
+				<link rel="icon" href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png" />
+			</Head>
 			<img className={bgStyle} src={images[index]}></img>
 			<div className={styles.homecontainer}>
 				<h1> Start Exploring</h1>

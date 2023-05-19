@@ -1,6 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from "react";
 import { supabase } from "../../../util/util";
+import Head from "next/head";
 
 export default function Account({ user, setUser }) {
   const [email, setEmail] = useState("");
@@ -82,6 +83,11 @@ export default function Account({ user, setUser }) {
   if (!user) {
     return (
       <div className={styles.account}>
+        <Head>
+          <title>Account</title>
+          <meta name="description" content="Account page for National Parks" />
+          <link rel="icon" href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png" />
+			  </Head>
         {signInMode && (
           <div>
             <form onSubmit={handleSignIn}>
@@ -173,6 +179,11 @@ export default function Account({ user, setUser }) {
 
   return (
     <div>
+			<Head>
+				<title>Account</title>
+				<meta name="description" content="Account page for National Parks" />
+				<link rel="icon" href="https://www.pngkit.com/png/full/14-146161_white-location-icon-png-location-logo-png-white.png" />
+			</Head>
       <h1 className={styles.signedinmessage}>
         You are signed in with {user.email}
       </h1>
