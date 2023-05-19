@@ -325,3 +325,55 @@
 .parkswebsite:hover{
 	color: peachpuff
 }
+
+/* Login Page */
+
+.account {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255,255,255,0.9);
+	padding: 75px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.account button {
+	color: black;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 auto;
+	display: block;
+	border: none;
+	width: 100%;
+}
+
+.account button:hover {
+	color: orange;
+	cursor: pointer;
+}
+
+.account div {
+	padding: 20px;
+	/* border: 1px solid red; */
+}
+
+.account div input {
+	padding: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #333;
+	outline: none;
+	transition: black 0.3s ease;
+}
+
+.account div label {
+	color: black;
+	/* border: 1px solid red; */
+	padding-right: 25px;
+	font-size: 125%;
+}

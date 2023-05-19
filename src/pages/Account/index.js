@@ -82,16 +82,6 @@ export default function Account({ user, setUser }) {
 	if (!user) {
 		return (
 			<div className={styles.account}>
-				<button
-					onClick={() => {
-						setSignInMode(!signInMode);
-						setEmail("");
-						setPassword("");
-						setConfirmPassword("");
-					}}
-				>
-					{signInMode ? "Sign Up" : "Back to Sign In"}
-				</button>
 				{signInMode && (
 					<div>
 						<form onSubmit={handleSignIn}>
@@ -106,7 +96,7 @@ export default function Account({ user, setUser }) {
 								/>
 							</div>
 							<div>
-								<label htmlFor="password">Password:</label>
+								<label>Password:</label>
 								<input
 									type="password"
 									id="password"
@@ -160,6 +150,16 @@ export default function Account({ user, setUser }) {
 						</form>
 					</div>
 				)}
+				<button
+					onClick={() => {
+						setSignInMode(!signInMode);
+						setEmail("");
+						setPassword("");
+						setConfirmPassword("");
+					}}
+				>
+					{signInMode ? "Sign Up" : "Back to Sign In"}
+				</button>
 			</div>
 		);
 	}
