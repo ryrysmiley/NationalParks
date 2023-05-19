@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { stateCodes, supabase } from "../../../util/util";
 export default function ExplporeParks() {
-	
 	const [selectedState, setSelectedState] = useState(undefined);
 	const [parks, setParks] = useState([]);
 
@@ -22,7 +21,6 @@ export default function ExplporeParks() {
 					throw error;
 				}
 				setParks(data);
-				console.log(data);
 			} catch (error) {
 				console.log(error);
 			}
@@ -33,7 +31,13 @@ export default function ExplporeParks() {
 		<div className={styles.exploreparks}>
 			<div className={styles.exploreparksintro}>
 				<h1>EXPLORE PARKS</h1>
-				<p>Explore the breathtaking beauty of US national parks with our interactive 'Explore Parks' feature. Select a state of your choice and discover the stunning parks it has to offer. From towering mountains to serene lakes, embark on a virtual journey to explore the natural wonders of the United States.</p>
+				<p>
+					Explore the breathtaking beauty of US national parks with our
+					interactive 'Explore Parks' feature. Select a state of your choice and
+					discover the stunning parks it has to offer. From towering mountains
+					to serene lakes, embark on a virtual journey to explore the natural
+					wonders of the United States.
+				</p>
 			</div>
 			<div className={styles.selectparkscontainer}>
 				<select
@@ -42,30 +46,30 @@ export default function ExplporeParks() {
 					className={styles.selectparks}
 				>
 					<option value="default" disabled>
-					-- select a state --
+						-- select a state --
 					</option>
 					{stateCodes.map((state) => (
-					<option key={state.stateCode} value={state.stateCode}>
-						{state.name}
-					</option>
+						<option key={state.stateCode} value={state.stateCode}>
+							{state.name}
+						</option>
 					))}
 				</select>
 			</div>
 
 			{selectedState && (
 				<ul>
-				{parks.map((park) => (
-					<li key={park.parkCode}>
-					<Link href={"/ExploreParks/" + park.parkCode}>
-						<div className={styles.exploreparkscontainer}>
-						<img src={park.images[0].url} />
-						<p>{park.fullName}</p>
-						</div>
-					</Link>
-					</li>
-				))}
+					{parks.map((park) => (
+						<li key={park.parkCode}>
+							<Link href={"/ExploreParks/" + park.parkCode}>
+								<div className={styles.exploreparkscontainer}>
+									<img src={park.images[0].url} />
+									<p>{park.fullName}</p>
+								</div>
+							</Link>
+						</li>
+					))}
 				</ul>
 			)}
 		</div>
-	  );
+	);
 }

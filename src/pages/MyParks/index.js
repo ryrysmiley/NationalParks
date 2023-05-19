@@ -46,7 +46,6 @@ export default function MyParks({ user, setUser }) {
 				<h1>Log in to see your saved parks!</h1>
 			</div>
 		);
-	console.log(userParks);
 	return (
 		<div className={styles.myparks}>
 			<h1>My Parks</h1>
