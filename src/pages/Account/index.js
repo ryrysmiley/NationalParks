@@ -138,6 +138,7 @@ export default function Account({ user, setUser }) {
 									type="password"
 									id="password"
 									value={password}
+									minLength="10"
 									onChange={(e) => setPassword(e.target.value)}
 									required
 								/>
@@ -148,6 +149,7 @@ export default function Account({ user, setUser }) {
 									type="password"
 									id="confirmpassword"
 									value={confirmPassword}
+									minLength="10"
 									onChange={(e) => setConfirmPassword(e.target.value)}
 									required
 								/>
