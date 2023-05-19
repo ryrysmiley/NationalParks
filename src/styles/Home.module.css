@@ -76,7 +76,7 @@
 }
 
 .homecontainer a:hover {
-	color: orange;
+	color: peachpuff;
 	text-decoration: underline;
 }
 
@@ -273,3 +273,25 @@
 .parkshours li {
 	text-align: center;
   }
+
+.parkssavepark{
+	background-color:white;
+	color: black;
+	border: none;
+	border-radius: 3px;
+}
+
+.parkssavepark:hover{
+	background-color: peachpuff;
+	color: black;
+	border: none;
+	border-radius: 3px;
+}
+
+.parkswebsite{
+	color: white
+}
+
+.parkswebsite:hover{
+	color: peachpuff
+}
