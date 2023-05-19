@@ -1,192 +1,193 @@
 /* Navbar */
 .navbar {
-	position: sticky;
-	top: 0;
-	z-index: 10;
-	background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .navbar ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	width: 100%;
-	display: flex;
-	justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .navbar li {
-	float: left;
+  float: left;
 }
 
 .navbar a {
-	display: block;
-	color: white;
-	font-size: large;
-	font-weight: bold;
-	text-align: center;
-	padding: 18px 40px;
-	text-decoration: none;
+  display: block;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px 40px;
+  text-decoration: none;
 }
 
 .navbar a:hover {
-	color: peachpuff;
+  color: peachpuff;
 }
 
 .locationicon {
-	padding: 5px;
-	height: 45px;
+  padding: 5px;
+  height: 45px;
 }
 
-@media screen and (max-width: 600px) {
-	.navbar li:nth-child(3) {
-		display: none;
-	}
-	.navbar ul {
-		flex-direction: column;	
-	}
-	.navbar a {
-		padding: 5px 40px;
-	}
+@media screen and (max-width: 650px) {
+  .navbar li:nth-child(3) {
+    display: none;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar a {
+    padding: 5px 40px;
+  }
 }
 /* Home Page */
 
 .homepic {
-	position: fixed;
-	z-index: -1;
-	object-fit: cover;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	transition: 0.25s;
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.25s;
 }
 
 .homepictrans {
-	position: fixed;
-	z-index: -1;
-	object-fit: cover;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: 0.5s;
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .homecontainer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.7);
-	border-radius: 10px;
-	padding: 20px;
-	color: white;
-	width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  width: 400px;
 }
 
 .homecontainer a {
-	color: white;
-	text-decoration: underline;
+  color: white;
+  text-decoration: underline;
 }
 
 .homecontainer a:hover {
-	color: peachpuff;
-	text-decoration: underline;
+  color: peachpuff;
+  text-decoration: underline;
 }
 
 /* ExploreParks */
 .exploreparks {
-	margin: 0;
+  margin: 0;
 }
-.selectparkscontainer{
-	padding-top: 20px;
-	position: sticky;
-	top: 59px;
-	z-index: 10;
-	background-color: rgba(0, 0, 0, 0.7);
+.selectparkscontainer {
+  padding-top: 20px;
+  position: sticky;
+  top: 59px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-@media screen and (max-width: 600px) {
-	.selectparkscontainer{
-		top: 124px;
-	}
+@media screen and (max-width: 650px) {
+  .selectparkscontainer {
+    top: 124px;
+  }
 }
 
 .exploreparksintro {
-	position: relative;
-	padding: 20px;
-	color: white;
-	text-align: center;
+  position: relative;
+  padding: 20px;
+  color: white;
+  text-align: center;
 }
 
 .selectparks {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 200px;
-	height: 30px;
-	padding: 5px;
-	font-size: 16px;
-	border-radius: 4px;
-	background-color: #fff;
-	z-index: 5;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 5;
 }
 
 .exploreparks ul {
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .exploreparks li {
-	list-style: none;
-	margin: 10px;
+  list-style: none;
+  margin: 10px;
 }
 
 .exploreparks a {
-	text-decoration: none;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 10px 50px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 50px;
 }
 
 .exploreparkscontainer {
-	position: relative;
-	padding: 0px;
-	width: 300px;
-	height: 350px;
-	overflow: hidden;
+  position: relative;
+  padding: 0px;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
 }
 
 .exploreparks img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
 }
 
 .exploreparkscontainer p {
-	position: absolute;
-	box-sizing: border-box;
-	text-align: center;
-	color: white;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.2);
-	padding: 20px;
-	margin: 0;
-	height: 100%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	font-weight: bold;
-	font-size: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* .exploreparks a:hover {
@@ -197,183 +198,289 @@
 /* my parks */
 
 .myparks {
-	margin: 0;
+  margin: 0;
 }
 
 .myparks h1 {
-	text-align: center;
+  text-align: center;
 }
 
 .myparks ul {
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .myparks li {
-	list-style: none;
-	margin: 10px;
+  list-style: none;
+  margin: 15px;
 }
 
 .myparks a {
-	text-decoration: none;
-	font-weight: bold;
-	color: black;
-	background-color: white;
-	padding: 10px 10px;
-	border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 .myparks a:hover {
-	transition: 0.3s;
-	background-color: peachpuff;
-	color: black;
+  transition: 0.3s;
+  background-color: peachpuff;
+  color: black;
 }
 
-.parkscontainer{
-	width: 100%;
-	text-align: center;
-	justify-content: center;
-	object-fit: cover;
-
+.parkscontainer {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  object-fit: cover;
 }
 
-.parksheader{
-	position: relative;
-	width: 100%;
-	height: 400px;
-	overflow: hidden;
+.parksheader {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
-.parksimg{
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
+.parksimg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.parksarrow{
-	position: absolute;
-	top: 50%;
-	right: 20px;
-	background-color: white;
-	border: none;
-	color: black;
-	font-size: 15px;
-	border-radius: 10%;
+.parksarrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 15px;
+  border-radius: 10%;
 }
 
-.parkstitle{
-	position: relative;
-	text-align: center;
+.parkstitle {
+  position: relative;
+  text-align: center;
 }
 
-.parksdescription{
-	margin-top: 40px;
-	text-align: center;
-	background-color: rgba(255, 255, 255, 0.3);
-	border-radius: 10px;
-	padding: 20px;
-	color: white;
-	width: 600px;	
-	max-width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+.parksdescription {
+  margin-top: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  width: 600px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.parksinfo{
-	margin-top: 40px;
-	text-align: center;
-	background-color: rgba(255, 255, 255, 0.3);
-	border-radius: 10px;
-	padding: 20px;
-	color: white;
-	width: 600px;	
-	max-width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+.parksinfo {
+  margin-top: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  width: 600px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.parkshours{
-	list-style: none;
-	padding: 0;
- 	 margin: 0;
+.parkshours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .parkshours li {
-	text-align: center;
-  }
-
-.parkssavepark{
-	background-color:white;
-	color: black;
-	border: none;
-	border-radius: 3px;
+  text-align: center;
 }
 
-.parkssavepark:hover{
-	background-color: peachpuff;
-	color: black;
-	border: none;
-	border-radius: 3px;
+.parkssavepark {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 5px;
+  width: 150px;
+  height: 35px;
+  font-size: 16px;
+  transition: 0.3s;
+  font-weight: 700;
 }
 
-.parkswebsite{
-	color: white
+.parkssavepark:hover {
+  background-color: peachpuff;
 }
 
-.parkswebsite:hover{
-	color: peachpuff
+.parkswebsite {
+  color: white;
+}
+
+.parkswebsite:hover {
+  color: peachpuff;
 }
 
 /* Login Page */
 
 .account {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(255,255,255,0.9);
-	padding: 75px;
-	border-radius: 15px;
-	display: flex;
-	flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  padding-top: 0px;
+  padding-bottom: 35px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.account button {
-	color: black;
-	background-color: rgba(0,0,0,0.1);
-	border-radius: 5px;
-	padding: 10px;
-	margin: 0 auto;
-	display: block;
-	border: none;
-	width: 100%;
+/* .account button {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  width: 100%;
 }
 
 .account button:hover {
-	color: orange;
-	cursor: pointer;
-}
+  color: orange;
+  cursor: pointer;
+} */
 
 .account div {
-	padding: 20px;
-	/* border: 1px solid red; */
+  padding: 20px;
+  /* border: 1px solid red; */
 }
 
 .account div input {
-	padding: 10px;
-	border: 2px solid #ccc;
-	border-radius: 5px;
-	font-size: 16px;
-	color: #333;
-	outline: none;
-	transition: black 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-top: 10px;
+  box-sizing: border-box;
 }
 
 .account div label {
-	color: black;
-	/* border: 1px solid red; */
-	padding-right: 25px;
-	font-size: 125%;
+  color: white;
+  /* border: 1px solid red; */
+  padding-right: 25px;
+  font-size: 125%;
+}
+.signedinmessage {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.signoutbutton {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.signoutbutton:hover {
+  background-color: peachpuff;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+}
+
+.signupbutton {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  width: 500px;
+  text-align: center;
+
+  transition: 0.3s;
+}
+.signupbutton:hover {
+  background-color: peachpuff;
+}
+.signupbutton:disabled {
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  width: 500px;
+  text-align: center;
+  transition: 0.3s;
+}
+.signinbutton {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  width: 500px;
+  transition: 0.3s;
+}
+.signinbutton:hover {
+  background-color: peachpuff;
+}
+@media screen and (max-width: 650px) {
+  .signupbutton {
+    width: 300px;
+  }
+  .signinbutton {
+    width: 300px;
+  }
+  .signoutbutton {
+    width: 300px;
+  }
+  .account {
+    width: 75%;
+  }
+  .account div {
+    width: 85%;
+  }
+  .account div input {
+    width: 100%;
+  }
+  .account div label {
+    width: 100%;
+  }
 }
